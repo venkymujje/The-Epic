@@ -5,7 +5,7 @@ export default function Home() {
       <p className="mt-4 text-xl">రామాయణం మరియు మహాభారతం డిజిటల్ పఠనం.</p>
     </main>
     <footer>
-        <p>Ravi Teja<br>
+        <p>Ravi Teja</p>
     </footer>
   )
 }
