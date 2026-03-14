@@ -15,7 +15,7 @@ export default function TableOfContents() {
     <main className="min-h-screen bg-orange-50 p-6 md:p-12 font-serif">
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-orange-800 mb-4">
-          ధార్మిక గ్రంథమాల
+          భారతీయ సనాతన సాహిత్య గ్రంథమాల
         </h1>
         <p className="text-lg text-gray-700">రామాయణం మరియు మహాభారతం డిజిటల్ పఠనం</p>
       </header>
