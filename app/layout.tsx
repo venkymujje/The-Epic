@@ -8,8 +8,11 @@ const teluguFont = Noto_Sans_Telugu({
 });
 
 export const metadata: Metadata = {
-  title: "My Telugu App",
+  title: "The Epic",
   description: "రామాయణం మరియు మహాభారతం డిజిటల్ పఠనం",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
