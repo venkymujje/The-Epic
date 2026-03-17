@@ -1,14 +1,123 @@
-[
-  {
-    "slug": "ramayana-bala-1",
-    "title": "బాలకాండము - మొదటి అధ్యాయము",
-    "category": "Ramayanam",
-    "preview": "శ్రీరామ కథా ప్రారంభం మరియు నారద మహర్షి ఉపదేశం..."
-  },
-  {
-    "slug": "mahabharata-adi-1",
-    "title": "ఆదిపర్వము - పరిచయం",
-    "category": "Mahabharatham",
-    "preview": "కురువంశం యొక్క పుట్టుక మరియు నేపథ్యం..."
-  }
-]
+{
+  "epics": [
+    {
+      "id": "ramayana",
+      "name": "శ్రీమద్రామాయణము",
+      "englishName": "Srimad Ramayanam",
+      "author": "మహర్షి వాల్మీకి",
+      "parvas": [
+        {
+          "id": "bala-kanda",
+          "name": "బాలకాండము",
+          "englishName": "Bala Kanda",
+          "chapters": [
+            {
+              "id": 1,
+              "slug": "ramayana-bala-1",
+              "name": "మొదటి అధ్యాయము",
+              "englishName": "Chapter 1",
+              "verses": [
+                {
+                  "id": 1,
+                  "shloka": "తపస్యా దీక్షయా గుప్తం రామం సర్వగుణోదయం॥\nజానీహీ నాఖిలం సర్వం సర్వదర్శీ జనార్దనః।",
+                  "translation": "The great Rama, endowed with all virtues and protected by the practice of penance, is worthy of all knowledge. Know that Janardana, the all-seeing one, possesses all things.",
+                  "meaning": "ఈ శ్లోకం శ్రీరాముని గుణాల గురించి వర్ణిస్తుంది. ఆయన తపస్యతో సంరక్షితుడు మరియు సమస్త సద్గుణాలతో సంపన్నుడు. జనార్దనుడు (కృష్ణుడు మరియు ఈ సందర్భంలో రాముడు) సర్వదర్శీ - సర్వత్ర దృష్టి గల దేవత."
+                },
+                {
+                  "id": 2,
+                  "shloka": "సీతాయా రుక్మిణీయాశ్చ భద్రాయా భార్యలక్ష్మణః।\nఋక్షరాజం చ నీలం చ భక్తిలోకైర్యుక్తిమ్।।",
+                  "translation": "The devoted wives Sita, Rukmini, and Bhadra, along with Lakshman and the noble Nila, the king of bears, demonstrate the path of devotion and righteousness.",
+                  "meaning": "సీత, రుక్మిణి మరియు భద్రలు శ్రీరాముని భక్త పత్నులు. లక్ష్మణుడు ఆయన యొక్క భ్రాతృవత్సలుడు. ఈ సమస్త పాత్రలు భక్తి మరియు ధర్మం యొక్క పాటలను చూపుతారు."
+                },
+                {
+                  "id": 3,
+                  "shloka": "ఇతిహాసపుండరీకాక్ష మహాభాగవతోత్తమ।\nరామచরితమాహాత్మ్యం సర్వపాపప్రణాశనమ్।।",
+                  "translation": "The glorious narrative of Rama's deeds, like a lotus blossoming in the lake of history, destroys all sins and grants supreme liberation.",
+                  "meaning": "రామాయణం అనే ఇతిహాసం చాలా ఎత్తైనది. రాముని జీవన చరిత్ర అన్ని పాపాలను నశ్వరం చేస్తుంది మరియు ముక్తిని దకూలిస్తుంది."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "slug": "ramayana-bala-2",
+              "name": "రెండవ అధ్యాయము",
+              "englishName": "Chapter 2",
+              "verses": [
+                {
+                  "id": 1,
+                  "shloka": "దశరథస్య రాజ్ఞస్తు రామో బ్రహ్మ తేజసా।\nజాతో నాభిభవం క్షిప్రం సూర్యోదయ ఇవ ద్యుతిమ్।।",
+                  "translation": "Rama was born to King Dasaratha with divine brilliance, illuminating everywhere like the rising sun.",
+                  "meaning": "రాజు దశరథకు జన్మించిన శ్రీరాముడు దేవతుల తేజస్సుతో నిండిఉన్నవారు. ఆయన సూర్యుడిలాగా సర్వత్ర కాశ్మీరీయతను చేరాడు."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "slug": "ramayana-bala-3",
+              "name": "మూడవ అధ్యాయము",
+              "englishName": "Chapter 3",
+              "verses": []
+            },
+            {
+              "id": 4,
+              "slug": "ramayana-bala-4",
+              "name": "నాలుగవ అధ్యాయము",
+              "englishName": "Chapter 4",
+              "verses": []
+            },
+            {
+              "id": 5,
+              "slug": "ramayana-bala-5",
+              "name": "ఐదవ అధ్యాయము",
+              "englishName": "Chapter 5",
+              "verses": []
+            }
+          ]
+        },
+        {
+          "id": "ayodhya-kanda",
+          "name": "అయోధ్యాకాండము",
+          "englishName": "Ayodhya Kanda",
+          "chapters": [
+            {
+              "id": 1,
+              "slug": "ramayana-ayodhya-1",
+              "name": "మొదటి అధ్యాయము",
+              "englishName": "Chapter 1",
+              "verses": []
+            },
+            {
+              "id": 2,
+              "slug": "ramayana-ayodhya-2",
+              "name": "రెండవ అధ్యాయము",
+              "englishName": "Chapter 2",
+              "verses": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mahabharata",
+      "name": "మహాభారతము",
+      "englishName": "Mahabharatham",
+      "author": "వేద వ్యాసుడు",
+      "parvas": [
+        {
+          "id": "adi-parva",
+          "name": "ఆదిపర్వము",
+          "englishName": "Adi Parva",
+          "chapters": [
+            {
+              "id": 1,
+              "slug": "mahabharata-adi-1",
+              "name": "మొదటి అధ్యాయము",
+              "englishName": "Chapter 1",
+              "verses": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

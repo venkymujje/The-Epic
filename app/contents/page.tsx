@@ -1,66 +1,55 @@
 import Link from 'next/link';
-import chaptersData from '@/data/chapters.json';
-
-interface Chapter {
-  slug: string;
-  title: string;
-  preview: string;
-  category: string;
-}
-
-const chapters: Chapter[] = chaptersData as Chapter[];
+import chapters from '@/data/chapters.json';
 
 export default function TableOfContents() {
+  const chaptersData = chapters as any;
+
   return (
-    <main className="min-h-screen bg-orange-50 p-6 md:p-12 font-serif">
+    <main className="min-h-screen bg-orange-50 p-6 md:p-12">
       <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-orange-800 mb-4">
-          భారతీయ సనాతన సాహిత్య గ్రంథమాల
+        <h1 className="text-5xl md:text-6xl font-bold text-orange-950 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+          భారతీయ సనాతన గ్రంథాలు
         </h1>
-        <p className="text-lg text-gray-700">రామాయణం మరియు మహాభారతం డిజిటల్ పఠనం</p>
+        <p className="text-lg text-orange-700">రామాయణం, మహాభారతం డిజిటల్ అధ్యయనం</p>
       </header>
 
-      <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
-        {/* Ramayanam Section */}
-        <section>
-          <h2 className="text-2xl font-bold text-orange-700 border-b-2 border-orange-200 mb-4 pb-2">
-            శ్రీమద్రామాయణము
-          </h2>
-          <div className="space-y-4">
-            {chapters
-              .filter((c) => c.category === 'Ramayanam')
-              .map((chapter) => (
-                <ChapterCard key={chapter.slug} chapter={chapter} />
+      <div className="max-w-6xl mx-auto space-y-12">
+        {chaptersData.epics.map((epic: any) => (
+          <section key={epic.id}>
+            <h2 className="text-3xl font-bold text-orange-900 mb-6 pb-2 border-b-4 border-amber-400" 
+                style={{ fontFamily: "'Playfair Display', serif" }}>
+              {epic.name}
+            </h2>
+            
+            <div className="space-y-6">
+              {epic.parvas.map((parva: any) => (
+                <div key={parva.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="bg-gradient-to-r from-orange-100 to-amber-100 px-6 py-4 border-l-4 border-orange-500">
+                    <h3 className="text-2xl font-bold text-orange-900" style={{ fontFamily: "'Noto Serif Telugu', serif" }}>
+                      {parva.name}
+                    </h3>
+                  </div>
+                  
+                  <div className="p-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {parva.chapters.map((chapter: any) => (
+                      <Link
+                        key={chapter.id}
+                        href={`/read/${chapter.slug}`}
+                        className="block p-4 bg-orange-50 rounded-lg border border-orange-200 hover:bg-orange-100 hover:border-orange-400 transition-all"
+                      >
+                        <div className="text-sm text-orange-600 font-semibold">అధ్యాయం {chapter.id}</div>
+                        <h4 className="text-lg font-semibold text-orange-900 mt-2" style={{ fontFamily: "'Noto Serif Telugu', serif" }}>
+                          {chapter.name}
+                        </h4>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               ))}
-          </div>
-        </section>
-
-        {/* Mahabharatham Section */}
-        <section>
-          <h2 className="text-2xl font-bold text-red-800 border-b-2 border-red-200 mb-4 pb-2">
-            శ్రీమహాభారతము
-          </h2>
-          <div className="space-y-4">
-            {chapters
-              .filter((c) => c.category === 'Mahabharatham')
-              .map((chapter) => (
-                <ChapterCard key={chapter.slug} chapter={chapter} />
-              ))}
-          </div>
-        </section>
+            </div>
+          </section>
+        ))}
       </div>
     </main>
-  );
-}
-
-// Simple Card Component for each chapter
-function ChapterCard({ chapter }: { chapter: Chapter }) {
-  return (
-    <Link href={`/chapter/${chapter.slug}`}>
-      <div className="block p-4 bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow cursor-pointer">
-        <h3 className="text-xl font-semibold text-gray-900">{chapter.title}</h3>
-        <p className="text-gray-600 text-sm mt-1 line-clamp-2">{chapter.preview}</p>
-      </div>
-    </Link>
   );
 }
